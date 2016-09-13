@@ -49,8 +49,17 @@
 				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
-					<a href="shipping.html" class="text-green">Shipping</a>	
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<!-- <a href="shipping.html" class="text-green">Shipping</a>	 -->
+					<div class="select-wrapper">
+						<select class="form-control text-center" style="">
+							<option disabled selected>Shipping Class</option>
+							<option>option 1</option>
+							<option>option 2</option>
+							<option>option 3</option>
+						</select>
+						<div class="next-icon" style=""><i class="fa fa-caret-down"></i></div>
+					</div>	
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<i class="fa fa-caret-right text-gray"></i>
@@ -74,99 +83,149 @@
 			<h2>Product Allocation</h2>
 			<hr>
 			<div class="row">
-				<div class="col-md-6">
-					<div class="table-responsive" style="margin-top:;">
-						<table id="thetable" class="table table-hover1 text-center">
-							<tbody>
-						      <tr>	
+				<div class="row-height">
+					<div class="col-height col-md-6" style="position:relative;">
+						<div class="table-responsive" style="position:absolute; bottom:10px; width:100% !important;">
+							<table id="thetable1" class="table table-hover1 text-center1">
+								<thead>
+									<tr>
+										<th>Location</th>
+										<th>Total Quantity</th>
+										<th>Total Price</th>
+										<th>Sipping Cost</th>
+									</tr>
+								</thead>
+								<tbody>
+							      <tr>	
+							      	<td>6250 Descanso Ave, Buena Park</td>
+									<td>3</td>
+									<td>$1,615.90</td>
+									<td>$30.56</td>
+							      </tr>
+							      <tr>	
+							      	<td>29000 Hesperian Blvd, Hayward</td>
+									<td>2</td>
+									<td>$1,615.90</td>
+									<td>$20.56</td>
+							      </tr>
+							      <tr>	
+							      	<td>80 Garden Center, Broomfield</td>
+									<td>1</td>
+									<td>$1,615.90</td>
+									<td>$25.56</td>
+							      </tr>
+							    </tbody> 
+							</table>			
+						</div>			
+					</div>
 
-						      </tr>
-						    </tbody> 
-						</table>			
-					</div>			
-				</div>	
 
-				<div class="col-md-6">
-					<div class="table-responsive">
-						<table id="thetable" class="table table-hover1 text-center">
-							<tbody>
-						      <tr>
-						        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
-						        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
-						        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
-						        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
-						        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
-						        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
-						      </tr>
-						      <tr>
-						        <td>Los Angeles Market Buena Park</td>
-						        <td>Los Angeles Market Buena Park</td>
-						        <td>Los Angeles Market Buena Park</td>
-						        <td>Los Angeles Market Buena Park</td>
-						        <td>Los Angeles Market Buena Park</td>
-						        <td>Los Angeles Market Buena Park</td>
-						      </tr>
-						      <tr>
-						        <td>$10.00</td>
-						        <td>$10.00</td>
-						        <td>$10.00</td>
-						        <td>$10.00</td>
-						        <td>$10.00</td>
-						        <td>$10.00</td>
-						      </tr>
-						      <tr>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						      </tr>
-						      <tr>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						      </tr>
-						      <tr>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						      </tr>
-						      <tr>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						      </tr>
-						      <tr>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						        <td><input type="text" class="form-control"></td>
-						      </tr>
-						    </tbody> 
-						</table>			
-					</div>		
-				</div>	
+					<div class="col-height col-md-6">
+						<div class="table-responsive">
+							<table id="thetable" class="table table-hover1 text-center">
+								<tbody>
+							      <tr>
+							        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
+							        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
+							        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
+							        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
+							        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
+							        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=100&h=100&txttrack=0" class="img-responsive center-block"  alt="No Pic" style="max-width:100; height:auto; "/></td>
+							      </tr>
+							      <tr>
+							        <td>Los Angeles Market Buena Park</td>
+							        <td>Los Angeles Market Buena Park</td>
+							        <td>Los Angeles Market Buena Park</td>
+							        <td>Los Angeles Market Buena Park</td>
+							        <td>Los Angeles Market Buena Park</td>
+							        <td>Los Angeles Market Buena Park</td>
+							      </tr>
+							      <tr>
+							        <td>$10.00</td>
+							        <td>$10.00</td>
+							        <td>$10.00</td>
+							        <td>$10.00</td>
+							        <td>$10.00</td>
+							        <td>$10.00</td>
+							      </tr>
+							      <tr>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							      </tr>
+							      <tr>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							      </tr>
+							      <tr>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							      </tr>
+							      <tr>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							      </tr>
+							      <tr>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							        <td><input type="text" class="form-control"></td>
+							      </tr>
+							    </tbody> 
+							</table>			
+						</div>		
+					</div>
+				</div>		
 			</div>
 			<hr>
 
 			<div class="row">
 				<div class="col-md-6">
-						
+					<table>
+						<tr>
+							<td><strong>Total Price</strong></td>
+						</tr>
+						<tr>
+							<td><strong>Total Quantity</strong></td>
+						</tr>
+					</table>	
 				</div>
 				<div class="col-md-6">
-						
+					<table>
+						<tr>
+							<td>2</td>
+							<td>3</td>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>$0.90</td>
+							<td>$1.90</td>
+							<td>$2.90</td>
+							<td>$0.90</td>
+							<td>$1.90</td>
+							<td>$2.90</td>
+						</tr>
+					</table>	
 				</div>
 			</div>
 			
@@ -177,7 +236,7 @@
 		  			<button class="btn btn-primary" style="opacity:0.6;">Previous Page</button>		
 		  		</div>
 		  		<div class="col-md-2 col-sm-2 col-xs-2">
-		  			<a href="#" class="btn btn-primary">Next Page&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>		
+		  			<a href="#" class="btn btn-primary">Place Order&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>		
 		  		</div>
 			  </div>
 
