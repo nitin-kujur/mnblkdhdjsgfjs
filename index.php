@@ -59,7 +59,7 @@
 			<h4 class="visible-sm visible-xs">&nbsp;</h4>
 			<div class="alert alert-success">
 			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			  <strong>Ship products to multiple locations by following the checkout process below.</strong>
+			  Ship products to multiple locations by following the checkout process below.
 			</div>
 			<h2>Locations</h2>
 			<hr>
@@ -211,7 +211,7 @@
 		  			<a href="#" class="btn gray-bg">Add New Location</a>		
 		  		</div>
 		  		<div class="col-md-2 col-sm-2 col-xs-2">
-		  			<button class="btn gray-bg" data-toggle="collapse" data-target="#csv_upload">Add Bulk Locations</button>		
+		  			<button class="btn gray-bg" data-toggle="collapse" data-target="#csv-upload">Add Bulk Locations</button>		
 		  		</div>
 		  		<div class="col-md-2 col-sm-2 col-xs-2">
 		  			<a href="#" class="btn btn-primary">Next Page&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>		
@@ -220,7 +220,7 @@
 
 			  <h2>&nbsp;</h2>
 
-			  <div id="csv_upload" class="collapse">
+			  <div id="csv-upload" class="collapse">
 			  	<div class="form-group">
 			    	<div class="col-md-12">
 			    		<div class="col-md-4">
@@ -232,7 +232,7 @@
 				      	<div class="col-md-1">
 				      		<p style="font-size:1px;">&nbsp;</p>
 				      		<input id="csv_upload" type="file" class="form-control" name="csv_upload" accept=".csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" style="opacity:0; height:0px;">
-				      		<input type="button" class="form-control w3-btn w3-orange w3-text-white" id="" value="Upload" onclick="this.previousElementSibling.click();" style="display:inline;">
+				      		<input type="button" class="form-control" id="" value="Upload" onclick="this.previousElementSibling.click();" style="display:inline;">
 				      	</div>
 			    	</div>
 			  </div>
@@ -242,13 +242,11 @@
 		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript">
-			// alert('script');
 			csv_upload = document.getElementById("csv_upload");
 			csv_upload_txt = document.getElementById("csv_upload_txt");
 
 			csv_upload.onchange = function(e){
-				alert('changed');
-				    var ext = this.value.match(/\.([^\.]+)$/)[1];
+				    var ext = csv_upload.value.match(/\.([^\.]+)$/)[1];
 				    switch(ext)
 				    {
 				        case 'csv':

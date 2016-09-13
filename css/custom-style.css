@@ -81,7 +81,7 @@ select{
 
 	.text-green::after{
 		font-family: FontAwesome;
-		content: " \f00c";
+		/*content: " \f00c";*/
 	}
 
 	#navbar{
@@ -91,7 +91,8 @@ select{
 
 	.alert-success{
 		background-color: transparent !important;
-		border:2px solid;
+		border:2px solid green !important;
+		color: green !important;
 	}
 
 	.row-height {

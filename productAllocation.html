@@ -84,14 +84,14 @@
 			<div class="row no-border">
 				<div class="row-height">
 					<div class="col-height col-md-6" style="position:relative;">
-						<div class="table-responsive" style="position:absolute; bottom:0px; width:100% !important;">
+						<div id="price-list" class="table-responsive" style="position:absolute; bottom:10px; width:100% !important;">
 							<table class="table extra-padding">
 								<thead>
 									<tr>
 										<th>Location</th>
 										<th>Total Quantity</th>
 										<th>Total Price</th>
-										<th>Sipping Cost</th>
+										<th>Shipping Cost</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -120,7 +120,7 @@
 
 
 					<div class="col-height col-md-6">
-						<div class="table-responsive">
+						<div id="datatable-wrapper" class="table-responsive">
 							<table id="datatable" class="table text-center fixed-width">
 								<tr>
 									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
@@ -192,7 +192,7 @@
 			<div class="row no-border">
 				<div class="row-height">
 					<div class="col-height col-md-6">
-						<div class="table-responsive">
+						<div id="pricelist-shadow" class="table-responsive">
 							<table class="table">
 								<tr>
 									<td><strong>Total Price</strong></td>
@@ -204,7 +204,7 @@
 						</div>
 					</div>
 					<div class="col-height col-md-6">
-						<div class="table-responsive">
+						<div id="datatable-shadow" class="table-responsive">
 							<table class="table text-center fixed-width">
 								<tr>
 									<td>2</td>
@@ -265,6 +265,12 @@
 			    });
 			    
 			    return false;
+			});
+
+			$( "#datatable-wrapper" ).scroll(function() {
+				// alert(this.pageXOffset);
+				x = $(this).scrollLeft();
+				$('#datatable-shadow').scrollLeft(x)
 			});
 		</script>
 	</body>
