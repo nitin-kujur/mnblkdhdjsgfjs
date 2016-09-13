@@ -81,7 +81,8 @@ select{
 	}
 
 	.text-green::after{
-		content: "";
+		font-family: FontAwesome;
+		content: " \f00c";
 	}
 
 	#navbar{
