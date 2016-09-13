@@ -228,11 +228,10 @@
 		    				<input type="text" class="form-control" id="csv_upload_txt" disabled placeholder="No file Selected...">
 				    		<span class="w3-tiny pull-right">(Supported format: csv, xls, xlsx)</span>
 				    		<h6></h6>
-			      		<!-- <input type="button" class="form-control col-md-3" id="firstName" value="Upload" style="display:inline;"> -->
 				      	</div>
 				      	<div class="col-md-1">
 				      		<p style="font-size:1px;">&nbsp;</p>
-				      		<input id="csv_upload" type="file" class="form-control" name="csv_upload" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" style="opacity:0; height:0px;">
+				      		<input id="csv_upload" type="file" class="form-control" name="csv_upload" accept=".csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" style="opacity:0; height:0px;">
 				      		<input type="button" class="form-control w3-btn w3-orange w3-text-white" id="" value="Upload" onclick="this.previousElementSibling.click();" style="display:inline;">
 				      	</div>
 			    	</div>
@@ -243,10 +242,12 @@
 		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript">
+			// alert('script');
 			csv_upload = document.getElementById("csv_upload");
 			csv_upload_txt = document.getElementById("csv_upload_txt");
 
 			csv_upload.onchange = function(e){
+				alert('changed');
 				    var ext = this.value.match(/\.([^\.]+)$/)[1];
 				    switch(ext)
 				    {
