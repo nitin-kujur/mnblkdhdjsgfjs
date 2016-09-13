@@ -4,85 +4,10 @@
 		<title>Bulk Order</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-		<style type="text/css">
-			select{
-				    -webkit-appearance: none;
-				    -moz-appearance: none;
-				    appearance: none;
-				    background: transparent none repeat scroll 0 0;
-				    /*border: 0 none;*/
-				    box-sizing: border-box;
-				    display: block;
-				    font-size: 1.04286rem;
-				    font-weight: 400;
-				    height: auto;
-				    letter-spacing: initial;
-				    line-height: 1.61429rem;
-				    max-width: none;
-				    padding: 5px 32px 5px 10px;
-				    text-transform: initial;
-				    width: 100%;
-				    color:#808080;
-				}
-
-				.select-wrapper {
-				    background: #ffffff none repeat scroll 0 0;
-				    /*border: 1px solid #d3dbe2;*/
-				    /*border-radius: 3px;*/
-				    box-sizing: border-box;
-				    overflow: hidden;
-				    position: relative;
-				    vertical-align: bottom;
-				}
-
-				.next-icon {
-				    cursor: pointer;
-				    display: block;
-				    fill: #798c9c;
-				    margin-top: -6px;
-				    pointer-events: none;
-				    position: absolute;
-				    right: 10px;
-				    top: 50%;
-				    height: 12px;
-				    width: 12px;
-				}
-
-				a, a:active, a:focus{
-					outline: none !important;
-					text-decoration: none !important;
-				}
-
-				input[type = 'checkbox'], input[type = 'checkbox']:active, input[type = 'checkbox']:focus{
-					outline: none !important;
-					text-decoration: none !important;
-				}
-
-				.disabled, .disabled:hover{
-					color:black;
-					text-decoration: underline !important;
-				}
-
-				.text-gray, .text-gray:hover{
-					color: gray;
-				}
-
-				.hr-full{
-					position: absolute;
-					left:0;
-					right:0;
-					/*border: 0.1em black solid;*/
-					color: black;
-					margin-bottom: 20px !important;
-				}
-
-				.gray-bg{
-					background-color: lightgray;
-					color:gray;
-				}
-		</style>
+		<link rel="stylesheet" href="css/custom-style.css">
 	</head>
 	<body>
+	<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<h6>&nbsp;</h6>
 			<div class="row">
@@ -90,43 +15,39 @@
 					<a class="disabled" style="font-size:20px; text-decoration:none !important;"><strong>Place Bulk Order</strong></a>	
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
-					<a class="disabled">Locations</a>	
+					<a href="javascript:;" class="disabled">Locations</a>	
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
-					<a href="#" class=" text-gray">Products</a>	
+					<a href="product.html" class=" text-gray">Products</a>	
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
-					<a href="#" class=" text-gray">Shipping</a>	
+					<a href="shipping.html" class=" text-gray">Shipping</a>	
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
 				<div class="col-md-2 col-sm-2 col-xs-2">
-					<a href="#" class=" text-gray">Product Allocation</a>	
+					<a href="productAllocation.html" class=" text-gray">Product Allocation</a>	
 				</div>
-				<!-- <div class="col-md-2">
-					<strong>Shipping Class</strong>
-					<div class="select-wrapper">
-						<select class="form-control">
-							<option>option 1</option>
-							<option>option 2</option>
-							<option>option 3</option>
-						</select>	
-						<div class="next-icon"><i class="fa fa-angle-down"></i></div>
-					</div>
-				</div> -->
+				
 				<div class="col-md-2 col-sm-2 col-xs-2 pull-right">
 					<a href="#" class="btn btn-success pull-right">Clear Bulk Order</a>	
 				</div>
 			</div>
 			<hr class="hr-full">
-			<h4>&nbsp;</h4>
+		</div>
+	</nav>
+	
+		<div class="container-fluid">
+			<h1>&nbsp;</h1>
+			<h1>&nbsp;</h1>
+			<h4 class="visible-sm visible-xs">&nbsp;</h4>
 			<div class="alert alert-success">
 			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			  Ship products to multiple locations by following the checkout process below.
@@ -282,7 +203,7 @@
 		  			<button class="btn gray-bg" data-toggle="collapse" data-target="#csv_upload">Add Bulk Locations</button>		
 		  		</div>
 		  		<div class="col-md-2 col-sm-2 col-xs-2">
-		  			<a href="#" class="btn btn-primary">Next Page <i class="fa fa-caret-right"></i></a>		
+		  			<a href="#" class="btn btn-primary">Next Page&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>		
 		  		</div>
 			  </div>
 
@@ -318,9 +239,9 @@
 				    var ext = this.value.match(/\.([^\.]+)$/)[1];
 				    switch(ext)
 				    {
-				        case 'doc':
-				        case 'docx':
-				        case 'pdf':
+				        case 'csv':
+				        case 'xls':
+				        case 'xlsx':
 				            // alert('allowed');
 				            break;
 				        default:
