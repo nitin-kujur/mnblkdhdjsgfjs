@@ -12,24 +12,24 @@
 			<h6>&nbsp;</h6>
 			<div class="row">
 				<div class="col-md-2 col-sm-2 col-xs-2">
-					<a class="disabled" style="font-size:20px; text-decoration:none !important;"><strong>Place Bulk Order</strong></a>	
+					<a class="disabled" style="font-size:20px; text-decoration:none !important; color:1a1a1a !important;">Ship to Location</a>	
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
 					<a href="javascript:;" class="disabled">Locations</a>	
 				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
 					<a href="product.html" class=" text-gray">Products</a>	
 				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
 					<a href="shipping.html" class=" text-gray">Shipping</a>	
 				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
 				<div class="col-md-2 col-sm-2 col-xs-2">
@@ -50,149 +50,151 @@
 			<h4 class="visible-sm visible-xs">&nbsp;</h4>
 			<div class="alert alert-success">
 			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			  Ship products to multiple locations by following the checkout process below.
+			  <strong>Ship products to multiple locations by following the checkout process below.</strong>
 			</div>
 			<h2>Locations</h2>
 			<hr>
-			<table class="table table-hover">
-			    <thead>
-			      <tr>
-			        <th></th>
-			        <th>Location</th>
-			        <th>Email</th>
-			        <th>Verified email</th>
-			        <th></th>
-			      </tr>
-			    </thead>
-			    <tbody>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Los Angeles Market Buena Park</td>
-			        <td>pepsitest04@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Central Valley North Eureka</td>
-			        <td>pepsitest03@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Bay Market Hayward</td>
-			        <td>pepsitest02@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Los Angeles Market Buena Park</td>
-			        <td>pepsitest04@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Central Valley North Eureka</td>
-			        <td>pepsitest03@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Bay Market Hayward</td>
-			        <td>pepsitest02@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Los Angeles Market Buena Park</td>
-			        <td>pepsitest04@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Central Valley North Eureka</td>
-			        <td>pepsitest03@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Bay Market Hayward</td>
-			        <td>pepsitest02@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Los Angeles Market Buena Park</td>
-			        <td>pepsitest04@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Central Valley North Eureka</td>
-			        <td>pepsitest03@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Bay Market Hayward</td>
-			        <td>pepsitest02@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Los Angeles Market Buena Park</td>
-			        <td>pepsitest04@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Central Valley North Eureka</td>
-			        <td>pepsitest03@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Bay Market Hayward</td>
-			        <td>pepsitest02@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Los Angeles Market Buena Park</td>
-			        <td>pepsitest04@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Central Valley North Eureka</td>
-			        <td>pepsitest03@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			      <tr>
-			        <td><input type="checkbox"></td>
-			        <td>Bay Market Hayward</td>
-			        <td>pepsitest02@lapineinc.com</td>
-			        <td>true</td>
-			        <td><a href="#" class="disabled">Edit</a></td>
-			      </tr>
-			    </tbody>
-			  </table>
+			<div class="table-responsive">
+				<table class="table table-hover">
+				    <thead>
+				      <tr>
+				        <th></th>
+				        <th>Location</th>
+				        <th>Email</th>
+				        <th>Verified email</th>
+				        <th></th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Los Angeles Market Buena Park</td>
+				        <td>pepsitest04@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Central Valley North Eureka</td>
+				        <td>pepsitest03@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Bay Market Hayward</td>
+				        <td>pepsitest02@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Los Angeles Market Buena Park</td>
+				        <td>pepsitest04@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Central Valley North Eureka</td>
+				        <td>pepsitest03@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Bay Market Hayward</td>
+				        <td>pepsitest02@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Los Angeles Market Buena Park</td>
+				        <td>pepsitest04@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Central Valley North Eureka</td>
+				        <td>pepsitest03@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Bay Market Hayward</td>
+				        <td>pepsitest02@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Los Angeles Market Buena Park</td>
+				        <td>pepsitest04@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Central Valley North Eureka</td>
+				        <td>pepsitest03@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Bay Market Hayward</td>
+				        <td>pepsitest02@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Los Angeles Market Buena Park</td>
+				        <td>pepsitest04@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Central Valley North Eureka</td>
+				        <td>pepsitest03@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Bay Market Hayward</td>
+				        <td>pepsitest02@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Los Angeles Market Buena Park</td>
+				        <td>pepsitest04@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Central Valley North Eureka</td>
+				        <td>pepsitest03@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				      <tr>
+				        <td><input type="checkbox"></td>
+				        <td>Bay Market Hayward</td>
+				        <td>pepsitest02@lapineinc.com</td>
+				        <td>true</td>
+				        <td><a href="#" class="disabled">Edit</a></td>
+				      </tr>
+				    </tbody>
+				  </table>
+				</div>
 
 			  <h4>&nbsp;</h4>
 			  <div class="row">

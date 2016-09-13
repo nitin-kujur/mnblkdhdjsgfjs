@@ -89,3 +89,8 @@ select{
 		height:auto !important;
 		background-color: white !important;
 	}
+
+	.alert-success{
+		background-color: transparent !important;
+		border:2px solid;
+	}
