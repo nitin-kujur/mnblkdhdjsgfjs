@@ -77,7 +77,6 @@ select{
 
 	.text-green, .text-green:hover{
 		color: green;
-		/*text-decoration: underline !important;*/
 	}
 
 	.text-green::after{
@@ -105,4 +104,18 @@ select{
 	  display: table-cell;
 	  float: none;
 	  height: 100%;
+	}
+
+	.no-border td{
+		border:none !important;
+	}
+
+	.extra-padding td{
+		padding-top:15px !important;
+		padding-bottom:15px !important;
+	}
+
+	.fixed-width td{
+		min-width: 150px !important;
+		max-width: 150px !important;
 	}
