@@ -77,7 +77,7 @@ select{
 
 	.text-green, .text-green:hover{
 		color: green;
-		text-decoration: underline !important;
+		/*text-decoration: underline !important;*/
 	}
 
 	.text-green::after{
