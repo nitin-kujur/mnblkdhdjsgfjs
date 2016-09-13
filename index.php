@@ -43,7 +43,7 @@
 			<hr class="hr-full">
 		</div>
 	</nav>
-	
+
 		<div class="container-fluid">
 			<h1>&nbsp;</h1>
 			<h1>&nbsp;</h1>
@@ -209,7 +209,7 @@
 
 			  <h2>&nbsp;</h2>
 
-			  <div id="csv_upload" class="collapse in">
+			  <div id="csv_upload" class="collapse">
 			  	<div class="form-group">
 			    	<div class="col-md-12">
 			    		<div class="col-md-4">
