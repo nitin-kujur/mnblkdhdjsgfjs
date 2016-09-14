@@ -11,25 +11,31 @@
 		<div class="container-fluid">
 			<h6>&nbsp;</h6>
 			<div class="row">
-				<div class="col-md-2 col-sm-2 col-xs-2">
+				<!-- <div class="col-md-2 col-sm-2 col-xs-2">
 					<a class="disabled" style="font-size:20px; text-decoration:none !important; color:1a1a1a !important;">Ship to Location</a>	
-				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
-					<a href="javascript:;" class="disabled">Locations</a>	
-				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
-					<i class="fa fa-caret-right text-gray"></i>
-				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
-					<a href="product.html" class=" text-gray">Products</a>	
+				</div> -->
+				<div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
+					<a href="javascript:;" class="disabled"><h5>Choose Location</h5></a>	
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
-					<i class="fa fa-caret-right text-gray"></i>
+					<h5><i class="fa fa-caret-right text-gray"></i></h5>
 				</div>
-				<div class="col-md-2 col-sm-2 col-xs-2">
+				<div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
+					<a href="product.html" class=" text-gray"><h5>Select Products</h5></a>	
+				</div>
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
+					<h5><i class="fa fa-caret-right text-gray"></i></h5>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
+					<a href="productAllocation.html" class=" text-gray"><h5>Product Allocation</h5></a>	
+				</div>
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
+					<h5><i class="fa fa-caret-right text-gray"></i></h5>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2" style="min-width:190px;">
 					<!-- <a href="shipping.html" class=" text-gray">Shipping</a> -->
 					<div class="select-wrapper">
-						<select class="form-control text-center" style="">
+						<select class="form-control text-center">
 							<option disabled selected>Shipping Class</option>
 							<option>option 1</option>
 							<option>option 2</option>
@@ -38,15 +44,9 @@
 						<div class="next-icon" style=""><i class="fa fa-caret-down"></i></div>
 					</div>	
 				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
-					<i class="fa fa-caret-right text-gray"></i>
-				</div>
-				<div class="col-md-2 col-sm-2 col-xs-2">
-					<a href="productAllocation.html" class=" text-gray">Product Allocation</a>	
-				</div>
 				
 				<div class="col-md-2 col-sm-2 col-xs-2 pull-right">
-					<a href="#" class="btn btn-success pull-right">Clear Bulk Order</a>	
+					<a href="#" class="btn btn-success pull-right">Clear<span class="hidden-sm hidden-xs"> Bulk Order</span></a>	
 				</div>
 			</div>
 			<hr class="hr-full">

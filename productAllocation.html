@@ -5,29 +5,6 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/custom-style.css">
-		<script type="text/javascript">
-			$(function() {
-			    var t = $('#thetable tbody').eq(0);
-			    var r = t.find('tr');
-			    var cols= r.length;
-			    var rows= r.eq(0).find('td').length;
-			    var cell, next, tem, i = 0;
-			    var tb= $('<tbody></tbody>');
-
-			    while(i<rows){
-			        cell= 0;
-			        tem= $('<tr></tr>');
-			        while(cell<cols){
-			            next= r.eq(cell++).find('td').eq(0);
-			            tem.append(next);
-			        }
-			        tb.append(tem);
-			        ++i;
-			    }
-			    $('#thetable').append(tb);
-			    $('#thetable').show();
-			}
-		</script>
 	</head>
 	<body>
 	<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
