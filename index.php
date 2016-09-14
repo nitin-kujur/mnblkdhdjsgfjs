@@ -15,7 +15,7 @@
 					<a class="disabled" style="font-size:20px; text-decoration:none !important; color:1a1a1a !important;">Ship to Location</a>	
 				</div> -->
 				<div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
-					<a href="javascript:;" class="disabled"><h5>Choose Location</h5></a>	
+					<a href="javascript:;" class="disabled"><h5>Choose Locations</h5></a>	
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<h5><i class="fa fa-caret-right text-gray"></i></h5>
@@ -35,7 +35,7 @@
 				<div class="col-md-2 col-sm-2 col-xs-2" style="min-width:190px;">
 					<!-- <a href="shipping.html" class=" text-gray">Shipping</a> -->
 					<div class="select-wrapper">
-						<select class="form-control text-center">
+						<select class="form-control text-center" style="font-size:13px; height:30px;">
 							<option disabled selected>Shipping Class</option>
 							<option>option 1</option>
 							<option>option 2</option>
@@ -46,7 +46,7 @@
 				</div>
 				
 				<div class="col-md-2 col-sm-2 col-xs-2 pull-right">
-					<a href="#" class="btn btn-success pull-right">Clear<span class="hidden-sm hidden-xs"> Bulk Order</span></a>	
+					<a href="#" class="btn btn-success pull-right" style="font-size:; padding:15px;"><span style="margin-left:25px; margin-right:25px;">Clear Bulk Order</span></a>	
 				</div>
 			</div>
 			<hr class="hr-full">
