@@ -66,27 +66,85 @@
 				        <th></th>
 				        <th>Image</th>
 				        <th>Name</th>
-				        <th>Price</th>
+				        <th>Varients</th>
 				      </tr>
 				    </thead>
 				    <tbody>
 				      <tr>
-				        <td><input type="checkbox"></td>
+				        <td><input type="checkbox" data-toggle="collapse" data-target="#AquafinaMats"></td>
 				        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+1&w=150&h=150&txttrack=0" class="img-responsive"  alt="No Pic" style="max-width:150; height:auto; "/>
-				        <td>Aquafina Floor Mats</td>
-				        <td>$10.00</td>
+				        <td>
+				        	Aquafina Floor Mats<br>$10.00<br>
+				        	<div id="AquafinaMats" class="collapse in1"><br>
+				        		<div class="row">
+			        				<div class="col-md-1">
+		        						<input type="checkbox">  
+			        				</div>
+			        				<div class="col-md-4">
+			        					<select class="form-control text-center">
+			        						<option>S</option>
+			        						<option>M</option>
+			        						<option>L</option>
+			        						<option>XL</option>
+			        					</select> 	
+			        				</div>
+			        				<div class="col-md-4">
+			        					<select class="form-control text-center">
+			        						<option>BLUE</option>
+			        						<option>GREEN</option>
+			        						<option>RED</option>
+			        						<option>BLACK</option>
+			        					</select> 	
+			        				</div>
+				        		</div>
+					        </div>
+				        </td>
+				        <td>
+				        	Varients Available<br>
+				        	<button class="btn btn-primary"  data-toggle="collapse" data-target="#AquafinaMats">View Varients</button>
+				        </td>
+				        
 				      </tr>
 				      <tr>
 				        <td><input type="checkbox"></td>
 				        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+2&w=150&h=150&txttrack=0" class="img-responsive"  alt="No Pic" style="max-width:150; height:auto; "/>
-				        <td>Aquafina Headsweats Sport SuperVisor (Domestic)</td>
-				        <td>$10.00</td>
+				        <td>Aquafina Headsweats Sport SuperVisor (Domestic)<br>$10.00</td>
+				        <td>No Varients</td>
 				      </tr>
 				      <tr>
-				        <td><input type="checkbox"></td>
+				        <td><input type="checkbox"  data-toggle="collapse" data-target="#AquafinaHeadsweats"></td>
 				        <td><img src="https://placeholdit.imgix.net/~text?txtsize=35&bg=4a90e2&txtclr=ffffff&txt=Product+3&w=150&h=150&txttrack=0" class="img-responsive"  alt="No Pic" style="max-width:150; height:auto; "/>
-				        <td>Aquafina 10 Oz. Frost Flex Textured Plastic Cup</td>
-				        <td>$10.00</td>
+				        <td>
+				        	Aquafina 10 Oz. Frost Flex Textured Plastic Cup<br>$10.00
+				        	<div id="AquafinaHeadsweats" class="collapse in1"><br>
+				        		<div class="row">
+			        				<div class="col-md-1">
+		        						<input type="checkbox"> 
+			        				</div>
+			        				<div class="col-md-4">
+			        					<select class="form-control text-center">
+			        						<option>S</option>
+			        						<option>M</option>
+			        						<option>L</option>
+			        						<option>XL</option>
+			        					</select> 	
+			        				</div>
+			        				<div class="col-md-4">
+			        					<select class="form-control text-center">
+			        						<option>BLUE</option>
+			        						<option>GREEN</option>
+			        						<option>RED</option>
+			        						<option>BLACK</option>
+			        					</select> 	
+			        				</div>
+				        		</div>
+					        </div>
+					    </td>
+				        <td>
+				        	Varients Available<br>
+				        	<button class="btn btn-primary"  data-toggle="collapse" data-target="#AquafinaHeadsweats">View Varients</button>
+				        </td>
+				        
 				      </tr>
 				      
 				    </tbody>
@@ -109,5 +167,11 @@
 		<h2>&nbsp;</h2>
 		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('select:not(#skills)').wrap('<div class="select-wrapper"></div>');
+		 		$('.select-wrapper').append('<div class="next-icon"><i class="fa fa-angle-down"></i></div>');
+		 	});
+		</script>
 	</body>
 </html>
