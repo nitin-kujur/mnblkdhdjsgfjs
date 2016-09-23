@@ -7,6 +7,137 @@
 		<link rel="stylesheet" href="css/custom-style.css">
 	</head>
 	<body>
+
+	<!-- Varients Modal popup -->
+            <div class="modal modal-wide fade text-center1" id="variantModal" tabindex="-1" role="dialog" aria-labelledby="variantModal" aria-hidden="true" style="position:fixed; z-index:999999999;">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="background:transparent; box-shadow:0px 0px 0px 0px;">
+                        <div class="modal-body w3-card-2" style="background:white; padding-bottom:; border-radius: 2px; height:auto;"> 
+                            <div class="container-fluid" style="height:;">
+                            	<button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true"><p> </p>&times;</button>
+                                <div class="jumbotron text-center1" style="background:white; padding:0 50px;">
+									<h2>AQUAFINA CONCERT TANK</h2>
+									<div class="row">
+										<div class="col-xs-12">
+											<h3 class="text-gray">$5.40</h3>
+											<form role='form' method='POST' action=''>
+												<div class="form-inline">
+													<div class="form-group">
+														<label for="">SIZE</label>
+														<div class="select-wrapper" style="min-width:250px;">
+															<select class="form-control text-center shop-select" style="min-width:250px;">
+																<option selected>SMALL (S)</option>
+																<option>MEDIUM (M)</option>
+																<option>LARGE (L)</option>
+																<option>EXTRA LARGE (XL)</option>
+															</select>
+															<div class="next-icon" style=""><i class="fa fa-caret-down"></i></div>
+														</div>	
+													</div>	
+
+													<div class="form-group">
+														<label for="">COLOR</label>
+														<div class="select-wrapper" style="min-width:250px;">
+															<select class="form-control text-center shop-select" style="min-width:250px;">
+																<option selected>TEAL</option>
+																<option>BLUE</option>
+																<option>GREEN</option>
+																<option>BLACK</option>
+															</select>
+															<div class="next-icon" style=""><i class="fa fa-caret-down"></i></div>
+														</div>	
+													</div>
+
+													<div class="form-group">
+														<label>SELECT Qty.</label>
+														<br>
+														<div class="input-group" style="max-width:150px; ">
+															<div class="input-group-btn">
+																<button type="button" class="btn btn-default shop-select">-</button>
+															</div>
+															<input type="number" class="form-control shop-select text-center" value="0" name="" style="cursor:default;" disabled readonly/>
+															<div class="input-group-btn">
+																<button type="button" class="btn btn-default shop-select">+</button>
+															</div>
+														</div>
+													</div>
+
+													<div class="form-group" style="">
+														<label>&nbsp;</label>
+														<br>
+														<button type="button" class="btn btn-primary shop-select" style="background-color:#146db5; color:white;"><span style="padding:0 34px;">ADD</span></button>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="col-xs-12">
+											<div id="" class="table-responsive variantTable">
+												<br>
+												<table class="table text-center table-bordered table-striped">
+													<tr>
+														<td><b>S.No.</b></td>
+														<td><b>Size</b></td>
+														<td><b>Color</b></td>
+														<td><b>Qty.</b></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>1</td>
+														<td>SMALL (S)</td>
+														<td>BLACK</td>
+														<td>10</td>
+														<td><a class="row-del" title="Remove this row" href="#"><i class="fa fa-times-circle"></i></a></td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>LARGE (L)</td>
+														<td>BLUE</td>
+														<td>5</td>
+														<td><a class="row-del" title="Remove this row" href="#"><i class="fa fa-times-circle"></i></a></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</table>	
+											</div>
+										</div>
+
+										<div class="col-xs-12">
+											<div class="form-inline">
+												<div class="form-group">
+													<label for="">Total Quantity</label><br>
+													<input type="number" class="form-control shop-select text-center" value="15" name="" style="cursor:default;" disabled readonly style="min-width:200px; max-width:250px; font-weight:bolder;"/>
+												</div>
+												<div class="form-group pull-right" style="width:parent; clear:both;">
+													<label>&nbsp;</label>
+													<br>
+													<button type="button" class="btn btn-primary shop-select" style="background-color:#146db5; color:white; position:relative; right:0px;"><span style="padding:0 30px;">ADD TO GRID</span></button>
+												</div>
+											</div>
+										</div>
+										
+										
+									</div>
+                                </div>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div> <br><br>
+            </div>  
+<!-- Varients Modal popup -->
+
 	<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<h6>&nbsp;</h6>
@@ -27,15 +158,15 @@
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
 				<div class="col-md-2 col-sm-2 col-xs-2">
-					<div class="select-wrapper">
-						<select class="form-control text-center" style="">
+					<!-- <div class="select-wrapper"> -->
+						<select class="form-control text-center" style="font-size:13px; height:30px;">
 							<option disabled selected>Shipping Class</option>
 							<option>option 1</option>
 							<option>option 2</option>
 							<option>option 3</option>
 						</select>
-						<div class="next-icon" style=""><i class="fa fa-caret-down"></i></div>
-					</div>	
+						<!-- <div class="next-icon" style=""><i class="fa fa-caret-down"></i></div> -->
+					<!-- </div>	 -->
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<i class="fa fa-caret-right text-gray"></i>
@@ -105,9 +236,33 @@
 									<td>$10.00</td>
 									<td></td>
 									<td></td>
-									<td><input type="number" placeholder="minimum = 2" min="2" class="form-control" oninput="check_val(this,2)"></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
 								</tr>
 								<tr>
 									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
@@ -115,9 +270,33 @@
 									<td>$10.00</td>
 									<td></td>
 									<td></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
 								</tr>
 								<tr>
 									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
@@ -125,9 +304,33 @@
 									<td>$10.00</td>
 									<td></td>
 									<td></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
 								</tr>
 								<tr>
 									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
@@ -135,9 +338,33 @@
 									<td>$10.00</td>
 									<td></td>
 									<td></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
 								</tr>
 								<tr>
 									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
@@ -145,9 +372,33 @@
 									<td>$10.00</td>
 									<td></td>
 									<td></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
 								</tr>
 								<tr>
 									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
@@ -155,9 +406,33 @@
 									<td>$10.00</td>
 									<td></td>
 									<td></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
-									<td><input type="number" min="2" class="form-control"></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
 								</tr>
 							</table>			
 						</div>		
@@ -168,7 +443,7 @@
 
 			<div class="row no-border">
 				<div class="row-height">
-					<div class="col-height col-md-6">
+					<div id="pricelist-shadow-wrapper" class="col-height col-md-6">
 						<div id="pricelist-shadow" class="table-responsive">
 							<table class="table">
 								<tr>
@@ -180,7 +455,8 @@
 							</table>	
 						</div>
 					</div>
-					<div class="col-height col-md-6">
+					<div id="datatable-shadow-wrapper" class="col-height col-md-6">
+						<strong>Product Total</strong>
 						<div id="datatable-shadow" class="table-responsive">
 							<table class="table text-center fixed-width">
 								<tr>
@@ -240,6 +516,13 @@
 			            $this.append(this);
 			        });
 			    });
+
+			    $('select').wrap('<div class="select-wrapper"></div>');
+		 		$('.select-wrapper').append('<div class="next-icon"><i class="fa fa-angle-down"></i></div>');
+
+		 		var parent = document.getElementById('datatable-shadow-wrapper');
+				var child = document.getElementById('datatable-shadow');
+				child.style.bottom = child.clientWidth - child.offsetWidth + "px";
 			    
 			    return false;
 			});
