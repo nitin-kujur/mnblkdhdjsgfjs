@@ -168,6 +168,10 @@ select{
 		/*font-weight: bold;*/
 	}
 
+	.theme-color{
+		background-color: #146db5;
+	}
+
 	/*********************************Popup CSS***************************************/
 	.modal.modal-wide .modal-dialog {
 				  width: 70%;
