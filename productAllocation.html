@@ -578,7 +578,7 @@
 			sno = 1;
 			function addToTable() {
 				if(parseInt($('#qty').val()) > 0){
-					$('#varTable').append('<tr><td>'+sno+'</td><td>'+$('#var1').val()+'</td><td>'+$('#var2').val()+'</td><td>'+$('#qty').val()+'</td><td><a class="row-del" title="Remove this row" href="#" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td></tr>');
+					$('#varTable').append('<tr><td>'+sno+'</td><td>'+$('#var1').val()+'</td><td>'+$('#var2').val()+'</td><td>'+$('#qty').val()+'</td><td><a class="row-del" title="Remove this row" href="javascript:;" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td></tr>');
 					sno++;
 				}
 			}
