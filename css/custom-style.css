@@ -147,7 +147,22 @@ select{
 	    /*display: none !important;*/
 	/*}*/
 
-	.shop-select{
+	.tooltip > .tooltip-inner {
+	    background-color: #ffff32;
+	    color: black;
+	}
+
+	.error-tooltip + .tooltip.bottom .tooltip-arrow {
+	    border-bottom: 5px solid #ffff32;
+	}
+
+	.error-tooltip + .tooltip{margin-left:25px;}
+
+	.qty-tooltip + .tooltip.top .tooltip-arrow {
+	    border-top: 5px solid #ffff32;
+	}
+
+	.shop-select1{
 		background-color: #f4f4f4;
 	    border: 1px transparent;
 	    color: #333;

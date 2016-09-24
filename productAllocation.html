@@ -62,7 +62,7 @@
 															<div class="input-group-btn">
 																<button type="button" class="btn btn-default shop-select" onclick="elm = this.parentNode.nextElementSibling; if(elm.value != 0) elm.value = elm.value - 1;">-</button>
 															</div>
-															<input id="qty" type="number" class="form-control shop-select text-center" value="0" name="" style="cursor:default;" disabled readonly/>
+															<input id="qty" type="number" min="0" class="qty-tooltip form-control shop-select text-center" value="0" name="" style="cursor:default;" onchange="verifyThis(this)" data-toggle = "tooltip" data-animation = 'true' data-placement = "top" title = 'ADD Qty.'/>
 															<div class="input-group-btn">
 																<button type="button" class="btn btn-default shop-select" onclick="elm = this.parentNode.previousElementSibling; elm.value = parseInt(elm.value) + 1;">+</button>
 															</div>
@@ -124,12 +124,12 @@
 											<div class="form-inline">
 												<div class="form-group">
 													<label for="">Total Quantity</label><br>
-													<input type="number" class="form-control shop-select text-center" value="15" name="" style="cursor:default;" disabled readonly style="min-width:200px; max-width:250px; font-weight:bolder;"/>
+													<input type="number" class="form-control shop-select text-center" value="15" name="" disabled readonly style="min-width:200px; max-width:250px; font-weight:bolder; cursor:default;"/>
 												</div>
 												<div class="form-group pull-right" style="width:parent; clear:both;">
 													<label>&nbsp;</label>
 													<br>
-													<button type="button" class="btn btn-primary shop-select theme-color" style="background-color:; color:white; position:relative; right:0px;"><span style="padding:0 30px;">ADD TO GRID</span></button>
+													<button type="button" class="btn btn-primary shop-select theme-color" style="color:white; position:relative; right:0px;"><span style="padding:0 30px;">ADD TO GRID</span></button>
 												</div>
 											</div>
 										</div>
@@ -591,6 +591,17 @@
 					sno++;
 					$('#varTable').append('<tr><td>'+sno+'</td><td>'+$('#var1').val()+'</td><td>'+$('#var2').val()+'</td><td>'+$('#qty').val()+'</td><td><a class="row-del" title="Remove this row" href="javascript:;" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td></tr>');
 				}
+				else{
+					$('#qty').tooltip('show');
+				    setTimeout(function(){ $('#qty').tooltip('hide'); }, 10000);
+				}
+			}
+
+			function verifyThis(argument) {
+				value = $(argument).val();
+				if (!(parseInt(value) >= 0)) {
+					$(argument).val(0);
+				};
 			}
 		</script>
 	</body>
