@@ -156,7 +156,7 @@ select{
 	    border-bottom: 5px solid #ffff32;
 	}
 
-	.error-tooltip + .tooltip{margin-left:25px;}
+	.tooltip{margin-left:25px;}
 
 	.qty-tooltip + .tooltip.top .tooltip-arrow {
 	    border-top: 5px solid #ffff32;

@@ -593,7 +593,8 @@
 				}
 				else{
 					$('#qty').tooltip('show');
-				    setTimeout(function(){ $('#qty').tooltip('hide'); }, 10000);
+					$('#qty+.tooltip').tooltip().delay(1500).fadeOut('slow');
+				    // setTimeout(function(){ $('#qty').tooltip('hide'); }, 10000);
 				}
 			}
 
