@@ -2,60 +2,101 @@
 <html>
 	<head>
 		<title>Bulk Order</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link type="text/css" rel="stylesheet" href="https://docs.handsontable.com/pro/1.7.0/bower_components/handsontable-pro/dist/handsontable.full.min.css">
 		<link rel="stylesheet" href="css/custom-style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			.affix{
+				top:0px;
+				width:100%;
+				z-index: 999999;
+			}
+
+			.ht_clone_top, .ht_clone_top_left_corner{
+				top:148px !important;
+				display: none;
+				/*position: fixed !important;*/
+			}
+		</style>
 	</head>
 	<body>
+
+		<div class="jumbotron" style="padding:20px 0 10px 0; margin-bottom:0px; background-color: #0e5aa8;">
+			<div class="container">
+				<a href="#"><img src="https://cdn.shopify.com/s/files/1/1431/0294/t/3/assets/logo.png?16214878102389155724" style="max-width:115px; width:100%;"></a>
+			</div>	
+		</div>
+		<div id="nav-wrapper" data-spy="affix" data-offset-top="150">
+		<div class="container-fluid theme-color" style="border-top: 1px solid #1067c0; background-color: #0e5aa8; height:58px;">
+					&nbsp;
+		</div>
+
+		<nav id="navbar" class="navbar navbar-default navbar-static">
 		<div class="container-fluid">
 			<h6>&nbsp;</h6>
 			<div class="row">
-				<div class="col-md-2 col-sm-2 col-xs-2">
-					<a class="disabled" style="font-size:20px; text-decoration:none !important;"><strong>Place Bulk Order</strong></a>	
-				</div>
+				<!-- <div class="col-md-2 col-sm-2 col-xs-2">
+					<a class="disabled" style="font-size:20px; text-decoration:none !important;">Ship to Location</a>	
+				</div> -->
 				<div class="col-md-1 col-sm-1 col-xs-1">
 					<a href="index.php" class="text-green">Locations</a>	
 				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-1">
 					<a href="product.html" class="text-green">Products</a>	
 				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
-					<i class="fa fa-caret-right text-gray"></i>
-				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
-					<a href="javascript:;" class="disabled">Shipping</a>	
-				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1">
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<i class="fa fa-caret-right text-gray"></i>
 				</div>
 				<div class="col-md-2 col-sm-2 col-xs-2">
-					<a href="productAllocation.html" class=" text-gray">Product Allocation</a>	
+					<!-- <div class="select-wrapper"> -->
+						<select class="form-control text-center" style="font-size:13px; height:30px;">
+							<option disabled selected>Shipping Class</option>
+							<option>option 1</option>
+							<option>option 2</option>
+							<option>option 3</option>
+						</select>
+						<!-- <div class="next-icon" style=""><i class="fa fa-caret-down"></i></div> -->
+					<!-- </div>	 -->
+				</div>
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
+					<i class="fa fa-caret-right text-gray"></i>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<a href="javascript:;" class="disabled">Product Allocation</a>	
 				</div>
 				<div class="col-md-2 col-sm-2 col-xs-2 pull-right">
 					<a href="#" class="btn btn-success pull-right">Clear Bulk Order</a>	
 				</div>
 			</div>
 			<hr class="hr-full">
-			<h4>&nbsp;</h4>
+		</div>
+	</nav>
+	</div>
+		<div class="container">
+			<!-- <br>
+			<h1>&nbsp;</h1> -->
 			
-			<h2>Shipping</h2>
+			<h2 id="fix">Shipping</h2>
 			<hr>
 			
-			 <div id="datasheet" class="hot handsontable htRowHeaders htColumnHeaders table-responsive1"></div> 
+			 <div id="datasheet" class="hot handsontable htRowHeaders htColumnHeaders" style=""></div> 
 			  
 			<h4>&nbsp;</h4>
 			<div class="row">
-		  		<div class="col-md-2 col-sm-2 col-xs-2">
+		  		<div class="col-md-2 col-sm-3 col-xs-6">
 		  			<button id="export-string" type="button" class="btn gray-bg intext-btn">SAVE CHANGES</button>		
 		  		</div>
-		  		<div class="col-md-2 col-sm-2 col-xs-2">
+		  		<div class="col-md-3 col-sm-4 col-xs-6">
 		  			<button class="btn gray-bg" data-toggle="collapse" data-target="#csv-upload">UPLOAD SHIPMENT FILE</button>		
 		  		</div>
-		  		<div class="col-md-2 col-sm-2 col-xs-2">
+		  		<div class="col-md-2 col-sm-3 col-xs-6">
 		  			<a href="#" class="btn btn-primary">Next Page&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>		
 		  		</div>
 		  </div>
@@ -71,21 +112,44 @@
 				    		<span class="w3-tiny pull-right">(Supported format: csv, xls, xlsx)</span>
 				    		<h6></h6>
 				      	</div>
-				      	<div class="col-md-1">
+				      	<div class="col-md-2 col-sm-3 col-xs-4">
 				      		<p style="font-size:1px;">&nbsp;</p>
 				      		<input id="csv_upload" type="file" class="form-control" name="csv_upload" accept=".csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" style="opacity:0; height:0px;">
 				      		<input type="button" class="form-control" id="" value="Upload" onclick="this.previousElementSibling.click();" style="display:inline;">
 				      	</div>
 			    	</div>
-			  </div>
-
+				</div>
+			</div>
 		</div>
 		<h2>&nbsp;</h2>
-		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<div class="jumbotron" style="padding:20px 50px 10px 50px; margin-bottom:0px; background-color: #0e5aa8;">
+			<div class="container" style="height:150px;">
+				<!-- <img src="https://cdn.shopify.com/s/files/1/1431/0294/t/3/assets/logo.png?16214878102389155724" style="max-width:115px; width:100%;"> -->
+			</div>	
+		</div>
+		<div class="container-fluid theme-color" style="border-top: 1px solid #1067c0; background-color: #0e5aa8;">
+			<div class="container" style="border-top: 1px solid white; padding:10px 50px;color: rgba(255, 255, 255, 0.6);">
+				<small>
+					&copy; 2016
+					<a href="/" style="color:white;" title="">ShopWaterPlus</a>
+				</small>
+			</div>
+		</div>
+		<!-- // <script type="text/javascript" src="js/bootstrap.js"></script> -->
 		<script src="https://docs.handsontable.com/pro/1.7.0/bower_components/handsontable-pro/dist/handsontable.full.min.js"></script>
 		<script type="text/javascript" src="js/papaparse.min.js"></script>
 		<script type="text/javascript">
+
+			$(document).ready(function(){
+				$("#nav-wrapper").on('affix.bs.affix', function(){
+					$('.ht_clone_top, .ht_clone_top_left_corner').css('display','block');
+				});
+
+				$("#nav-wrapper").on('affix-top.bs.affix', function(){
+					$('.ht_clone_top, .ht_clone_top_left_corner').css('display','none');
+				});		
+			});
+
 			document.addEventListener("DOMContentLoaded", function() {
 
 			  var fetchedData = '';
@@ -166,6 +230,17 @@
 												    startCols: 65,
 												    colHeaders: ['Ship To State ---  Weight Range','150','200','250','300','350','400','450','500','550','600','650','700','750','800','850','900','950','1000','1050','1100','1150','1200','1250','1300','1350','1400','1450','1500'],
 												    rowHeaders: true,
+												    preventOverflow: 'horizontal',
+												    observeChanges: true,
+												    className: "htRight",
+												    fixedColumnsLeft: 1,
+												    colWidths: ['250','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100','100'],
+												    // columns: [{col: 0, className: "htCenter"},],
+												    // columns: [
+																//    {
+																//      validator: /^[\$.0-9]$/ // regular expression
+																//    }
+																// ],
 												  });
 
 			  

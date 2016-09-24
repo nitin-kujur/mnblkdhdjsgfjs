@@ -5,6 +5,13 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/custom-style.css">
+		<style type="text/css">
+			.affix{
+				top:0px;
+				width:100%;
+				z-index: 5;
+			}
+		</style>
 	</head>
 	<body>
 
@@ -53,11 +60,11 @@
 														<br>
 														<div class="input-group" style="max-width:150px; ">
 															<div class="input-group-btn">
-																<button type="button" class="btn btn-default shop-select">-</button>
+																<button type="button" class="btn btn-default shop-select" onclick="this.parentNode.nextElementSibling.value = 1;">-</button>
 															</div>
 															<input type="number" class="form-control shop-select text-center" value="0" name="" style="cursor:default;" disabled readonly/>
 															<div class="input-group-btn">
-																<button type="button" class="btn btn-default shop-select">+</button>
+																<button type="button" class="btn btn-default shop-select" onclick="this.parentNode.previousElementSibling.value = 2;">+</button>
 															</div>
 														</div>
 													</div>
@@ -138,8 +145,18 @@
             </div>  
 <!-- Varients Modal popup -->
 
-	<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
+	<div class="jumbotron" style="padding:20px 0 10px 0; margin-bottom:0px; background-color: #0e5aa8;">
+		<div class="container">
+			<a href="#"><img src="https://cdn.shopify.com/s/files/1/1431/0294/t/3/assets/logo.png?16214878102389155724" style="max-width:115px; width:100%;"></a>
+		</div>	
+	</div>
+	<div data-spy="affix" data-offset-top="197">
+	<div class="container-fluid theme-color" style="border-top: 1px solid #1067c0; background-color: #0e5aa8; height:58px;">
+				&nbsp;
+	</div>
+
+	<nav id="navbar" class="navbar navbar-default navbar-fixed-top1">
+		<div class="container">
 			<h6>&nbsp;</h6>
 			<div class="row">
 				<div class="col-md-2 col-sm-2 col-xs-2">
@@ -181,13 +198,14 @@
 			<hr class="hr-full">
 		</div>
 	</nav>
+	</div>
 
-		<div class="container-fluid">
-			<h1>&nbsp;</h1>
+		<div class="container">
+			<!-- <h1>&nbsp;</h1>
 			<h1>&nbsp;</h1>
 			<h4 class="visible-sm visible-xs">&nbsp;</h4>
 			
-			<h2>Product Allocation</h2>
+			<h2>Product Allocation</h2> -->
 			<hr>
 			<div class="row no-border">
 				<div class="row-height">
@@ -495,6 +513,19 @@
 
 		</div>
 		<h2>&nbsp;</h2>
+		<div class="jumbotron" style="padding:20px 50px 10px 50px; margin-bottom:0px; background-color: #0e5aa8;">
+			<div class="container" style="height:150px;">
+				<!-- <img src="https://cdn.shopify.com/s/files/1/1431/0294/t/3/assets/logo.png?16214878102389155724" style="max-width:115px; width:100%;"> -->
+			</div>	
+		</div>
+		<div class="container-fluid theme-color" style="border-top: 1px solid #1067c0; background-color: #0e5aa8;">
+			<div class="container" style="border-top: 1px solid white; padding:10px 50px;color: rgba(255, 255, 255, 0.6);">
+				<small>
+					&copy; 2016
+					<a href="/" style="color:white;" title="">ShopWaterPlus</a>
+				</small>
+			</div>
+		</div>
 		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript">
