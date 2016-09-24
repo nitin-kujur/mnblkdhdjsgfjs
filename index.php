@@ -46,7 +46,7 @@
 				</div>
 				
 				<div class="col-md-2 col-sm-2 col-xs-2 pull-right">
-					<a href="#" class="btn btn-success pull-right" style="font-size:; padding:15px;"><span style="margin-left:25px; margin-right:25px;">Clear Bulk Order</span></a>	
+					<a href="#" class="btn btn-success pull-right" style=""><span style="margin-left:25px; margin-right:25px;">Clear Bulk Order</span></a>	
 				</div>
 			</div>
 			<hr class="hr-full">
