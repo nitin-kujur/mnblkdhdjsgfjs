@@ -124,7 +124,7 @@
 											<div class="form-inline">
 												<div class="form-group">
 													<label for="">Total Quantity</label><br>
-													<input type="number" class="form-control shop-select text-center" value="15" name="" disabled readonly style="min-width:200px; max-width:250px; font-weight:bolder; cursor:default;"/>
+													<input id="totalQty" type="number" class="form-control shop-select text-center" value="0" name="" disabled readonly style="min-width:200px; max-width:250px; font-weight:bolder; cursor:default;"/>
 												</div>
 												<div class="form-group pull-right" style="width:parent; clear:both;">
 													<label>&nbsp;</label>
@@ -572,8 +572,13 @@
 
 			sno = 0;
 			x = 0;
+			totalQty = 0;
 
 			function removeThisRow(argument) {
+
+				rem_qty = parseInt($(argument).parent().parent().find('.qty').html()); 
+				
+
 				node = argument.parentNode.parentNode;
 				parent = node.parentNode;
 				parent.removeChild(node);
@@ -584,12 +589,28 @@
 					child.children('td').first().text(x);
 					x++;
 				}
+
+				$('#totalQty').val(parseInt($('#totalQty').val()) - rem_qty);
+
+				// totalQty = 0;
+				// $('.qty').each(function(index, element) {
+				// 	e_val = parseInt(element.html());
+				// 	if(e_val >= 0){
+				// 		totalQty = totalQty + e_val;
+				// 	}					
+				// });
+
+				// $('#totalQty').val(totalQty.toString());
+
+				
 			}
 			
 			function addToTable() {
-				if(parseInt($('#qty').val()) > 0){
+				qty = parseInt($('#qty').val());
+				if(qty > 0){
 					sno++;
-					$('#varTable').append('<tr><td>'+sno+'</td><td>'+$('#var1').val()+'</td><td>'+$('#var2').val()+'</td><td>'+$('#qty').val()+'</td><td><a class="row-del" title="Remove this row" href="javascript:;" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td></tr>');
+					$('#totalQty').val(parseInt($('#totalQty').val()) + qty);
+					$('#varTable').append('<tr><td>'+sno+'</td><td>'+$('#var1').val()+'</td><td>'+$('#var2').val()+'</td><td class="qty">'+$('#qty').val()+'</td><td><a class="row-del" title="Remove this row" href="javascript:;" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td></tr>');
 				}
 				else{
 					$('#qty').tooltip('show');
