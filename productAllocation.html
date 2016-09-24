@@ -570,16 +570,26 @@
 			      $(elm).removeClass('error');
 			}
 
+			sno = 0;
+			x = 0;
+
 			function removeThisRow(argument) {
 				node = argument.parentNode.parentNode;
-				node.parentNode.removeChild(node);Row 
+				parent = node.parentNode;
+				parent.removeChild(node);
+				sno--;
+				x = 1;
+				while (x <= sno) {
+					child = $('#varTable tr').eq(x);
+					child.children('td').first().text(x);
+					x++;
+				}
 			}
-
-			sno = 1;
+			
 			function addToTable() {
 				if(parseInt($('#qty').val()) > 0){
-					$('#varTable').append('<tr><td>'+sno+'</td><td>'+$('#var1').val()+'</td><td>'+$('#var2').val()+'</td><td>'+$('#qty').val()+'</td><td><a class="row-del" title="Remove this row" href="javascript:;" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td></tr>');
 					sno++;
+					$('#varTable').append('<tr><td>'+sno+'</td><td>'+$('#var1').val()+'</td><td>'+$('#var2').val()+'</td><td>'+$('#qty').val()+'</td><td><a class="row-del" title="Remove this row" href="javascript:;" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td></tr>');
 				}
 			}
 		</script>
