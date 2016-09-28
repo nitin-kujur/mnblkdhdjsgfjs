@@ -17,12 +17,12 @@
 				<div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
 					<a href="javascript:;" class="disabled"><h5>Choose Locations</h5></a>	
 				</div>
-				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
+				<!-- <div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<h5><i class="fa fa-caret-right text-gray"></i></h5>
-				</div>
-				<div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
+				</div> -->
+				<!-- <div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
 					<a href="product.html" class=" text-gray"><h5>Select Products</h5></a>	
-				</div>
+				</div> -->
 				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<h5><i class="fa fa-caret-right text-gray"></i></h5>
 				</div>
@@ -32,7 +32,7 @@
 				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
 					<h5><i class="fa fa-caret-right text-gray"></i></h5>
 				</div>
-				<div class="col-md-2 col-sm-2 col-xs-2" style="min-width:190px;">
+				<div class="col-md-3 col-sm-3 col-xs-3" style="min-width:190px; max-width:190px;">
 					<!-- <a href="shipping.html" class=" text-gray">Shipping</a> -->
 					<div class="select-wrapper">
 						<select class="form-control text-center" style="font-size:13px; height:30px;">
@@ -45,7 +45,7 @@
 					</div>	
 				</div>
 				
-				<div class="col-md-2 col-sm-2 col-xs-2 pull-right">
+				<div class="col-md-3 col-sm-3 col-xs-3 pull-right">
 					<a href="#" class="btn btn-success pull-right" style=""><span style="margin-left:25px; margin-right:25px;">Clear Bulk Order</span></a>	
 				</div>
 			</div>
