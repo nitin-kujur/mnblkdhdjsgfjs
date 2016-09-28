@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Bulk Order</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/custom-style.css">
+		<style type="text/css">
+			.affix{
+				top:0px;
+				width:100%;
+				z-index: 5;
+			}
+		</style>
+	</head>
+	<body>
+
+	<!-- Varients Modal popup -->
+            <div class="modal modal-wide fade text-center1" id="variantModal" tabindex="-1" role="dialog" aria-labelledby="variantModal" aria-hidden="true" style="position:fixed; z-index:999999999;">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="background:transparent; box-shadow:0px 0px 0px 0px;">
+                        <div class="modal-body w3-card-2" style="background:white; padding-bottom:; border-radius: 2px; height:auto;"> 
+                            <div class="container-fluid" style="height:;">
+                            	<button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true"><p> </p>&times;</button>
+                                <div class="jumbotron text-center1" style="background:white; padding:0 50px;">
+									<h2>AQUAFINA CONCERT TANK</h2>
+									<div class="row">
+										<div class="col-xs-12">
+											<h3 class="text-gray">$5.40</h3>
+											<form role='form' method='POST' action=''>
+												<div class="form-inline">
+													<div class="form-group">
+														<label for="">SIZE</label>
+														<div class="select-wrapper" style="min-width:200px;">
+															<select id="var1" class="form-control text-center shop-select" style="min-width:200px;">
+																<option selected>SMALL (S)</option>
+																<option>MEDIUM (M)</option>
+																<option>LARGE (L)</option>
+																<option>EXTRA LARGE (XL)</option>
+															</select>
+															<div class="next-icon" style=""><i class="fa fa-caret-down"></i></div>
+														</div>	
+													</div>	
+
+													<div class="form-group">
+														<label for="">COLOR</label>
+														<div class="select-wrapper" style="min-width:200px;">
+															<select id="var2" class="form-control text-center shop-select" style="min-width:200px;">
+																<option selected>TEAL</option>
+																<option>BLUE</option>
+																<option>GREEN</option>
+																<option>BLACK</option>
+															</select>
+															<div class="next-icon" style=""><i class="fa fa-caret-down"></i></div>
+														</div>	
+													</div>
+
+													<div class="form-group">
+														<label>SELECT Qty.</label>
+														<br>
+														<div class="input-group" style="max-width:150px; ">
+															<div class="input-group-btn">
+																<button type="button" class="btn btn-default shop-select" onclick="elm = this.parentNode.nextElementSibling; if(elm.value != 0) elm.value = elm.value - 1;">-</button>
+															</div>
+															<input id="qty" type="number" min="0" class="qty-tooltip form-control shop-select text-center" value="0" name="" style="cursor:default;" onchange="verifyThis(this)" data-toggle = "tooltip" data-animation = 'true' data-placement = "top" title = 'ADD Qty.'/>
+															<div class="input-group-btn">
+																<button type="button" class="btn btn-default shop-select" onclick="elm = this.parentNode.previousElementSibling; elm.value = parseInt(elm.value) + 1;">+</button>
+															</div>
+														</div>
+													</div>
+
+													<div class="form-group pull-right" style="width:parent; clear:both;">
+														<label>&nbsp;</label>
+														<br>
+														<button type="button" class="btn btn-primary shop-select" style="background-color:#146db5; color:white;" onclick="addToTable()"><span style="padding:0 34px;">ADD</span></button>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="col-xs-12">
+											<div id="" class="table-responsive variantTable">
+												<br>
+												<table id="varTable" class="table text-center table-bordered table-striped">
+													<tr>
+														<td><b>S.No.</b></td>
+														<td><b>Size</b></td>
+														<td><b>Color</b></td>
+														<td><b>Qty.</b></td>
+														<td></td>
+													</tr>
+													<!-- <tr>
+														<td>1</td>
+														<td>SMALL (S)</td>
+														<td>BLACK</td>
+														<td>10</td>
+														<td><a class="row-del" title="Remove this row" href="#" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>LARGE (L)</td>
+														<td>BLUE</td>
+														<td>5</td>
+														<td><a class="row-del" title="Remove this row" href="#" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr> -->
+												</table>	
+											</div>
+										</div>
+
+										<div class="col-xs-12">
+											<div class="form-inline">
+												<div class="form-group">
+													<label for="">Total Quantity</label><br>
+													<input id="totalQty" type="number" class="form-control shop-select text-center" value="0" name="" disabled readonly style="min-width:200px; max-width:250px; font-weight:bolder; cursor:default;"/>
+												</div>
+												<div class="form-group pull-right" style="width:parent; clear:both;">
+													<label>&nbsp;</label>
+													<br>
+													<button type="button" class="btn btn-primary shop-select theme-color" style="color:white; position:relative; right:0px;"><span style="padding:0 30px;">ADD TO GRID</span></button>
+												</div>
+											</div>
+										</div>
+										
+										
+									</div>
+                                </div>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div> <br><br>
+            </div>  
+<!-- Varients Modal popup -->
+
+	<div class="jumbotron" style="padding:20px 0 10px 0; margin-bottom:0px; background-color: #0e5aa8;">
+		<div class="container">
+			<a href="#"><img src="https://cdn.shopify.com/s/files/1/1431/0294/t/3/assets/logo.png?16214878102389155724" style="max-width:115px; width:100%;"></a>
+		</div>	
+	</div>
+	<div data-spy="affix" data-offset-top="197">
+	<div class="container-fluid theme-color" style="border-top: 1px solid #1067c0; background-color: #0e5aa8; height:58px;">
+				&nbsp;
+	</div>
+
+	<nav id="navbar" class="navbar navbar-default">
+		<div class="container-fluid">
+			<h6>&nbsp;</h6>
+			<div class="row">
+				<!-- <div class="col-md-2 col-sm-2 col-xs-2">
+					<a class="disabled" style="font-size:20px; text-decoration:none !important; color:1a1a1a !important;">Ship to Location</a>	
+				</div> -->
+				<div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
+					<a href="javascript:;" class="disabled"><h5>Choose Locations</h5></a>	
+				</div>
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
+					<h5><i class="fa fa-caret-right text-gray"></i></h5>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
+					<a href="product.html" class=" text-gray"><h5>Select Products</h5></a>	
+				</div>
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
+					<h5><i class="fa fa-caret-right text-gray"></i></h5>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2" style="max-width:165px;">
+					<a href="productAllocation.html" class=" text-gray"><h5>Product Allocation</h5></a>	
+				</div>
+				<div class="col-md-1 col-sm-1 col-xs-1" style="max-width:60px;">
+					<h5><i class="fa fa-caret-right text-gray"></i></h5>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2" style="min-width:190px;">
+					<select class="form-control text-center" style="font-size:13px; height:30px;">
+						<option disabled selected>Shipping Class</option>
+						<option>option 1</option>
+						<option>option 2</option>
+						<option>option 3</option>
+					</select>
+				</div>
+				
+				<div class="col-md-2 col-sm-2 col-xs-2 pull-right">
+					<a href="#" class="btn btn-success pull-right" style=""><span style="margin-left:25px; margin-right:25px;">Clear Bulk Order</span></a>	
+				</div>
+			</div>
+			<hr class="hr-full">
+		</div>
+	</nav>
+	</div>
+
+		<div class="container">
+			<!-- <h1>&nbsp;</h1>
+			<h1>&nbsp;</h1>
+			<h4 class="visible-sm visible-xs">&nbsp;</h4>
+			
+			<h2>Product Allocation</h2> -->
+			<hr>
+			<div class="row no-border">
+				<div class="row-height">
+					<div class="col-height col-md-6" style="position:relative;">
+						<div id="price-list" class="table-responsive" style="position:absolute; bottom:0px; width:100% !important;">
+							<table class="table extra-padding">
+								<thead>
+									<tr class="fixed-td">
+										<th>Location</th>
+										<th>Total Quantity</th>
+										<th>Total Price</th>
+										<th>Shipping Cost</th>
+									</tr>
+								</thead>
+								<tbody>
+							      <tr class="fixed-td">	
+							      	<td>6250 Descanso Ave, Buena Park</td>
+									<td>3</td>
+									<td>$1,615.90</td>
+									<td>$30.56</td>
+							      </tr>
+							      <tr class="fixed-td">	
+							      	<td>29000 Hesperian Blvd, Hayward</td>
+									<td>2</td>
+									<td>$1,615.90</td>
+									<td>$20.56</td>
+							      </tr>
+							      <tr class="fixed-td">	
+							      	<td>80 Garden Center, Broomfield</td>
+									<td>1</td>
+									<td>$1,615.90</td>
+									<td>$25.56</td>
+							      </tr>
+							    </tbody> 
+							</table>			
+						</div>			
+					</div>
+
+
+					<div class="col-height col-md-6">
+						
+						<div id="datatable-wrapper" class="table-responsive">
+							<table id="datatable" class="table text-center fixed-width">
+								<tr>
+									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
+									<td>Los Angeles Market Buena Park</td>
+									<td>$10.00</td>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2"  disabled="true" class="form-control">
+											<div class="input-group-btn">
+												<a href="#" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</a>
+											</div>
+										</div>
+									</td>
+
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+								</tr>
+								<tr>
+									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
+									<td>Los Angeles Market Buena Park</td>
+									<td>$10.00</td>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+								</tr>
+								<tr>
+									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
+									<td>Los Angeles Market Buena Park</td>
+									<td>$10.00</td>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+								</tr>
+								<tr>
+									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
+									<td>Los Angeles Market Buena Park</td>
+									<td>$10.00</td>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+								</tr>
+								<tr>
+									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
+									<td>Los Angeles Market Buena Park</td>
+									<td>$10.00</td>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+								</tr>
+								<tr>
+									<td><img style="max-width:100; height:auto; " alt="No Pic" class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=35&amp;bg=4a90e2&amp;txtclr=ffffff&amp;txt=Product+1&amp;w=100&amp;h=100&amp;txttrack=0"></td>
+									<td>Los Angeles Market Buena Park</td>
+									<td>$10.00</td>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+									<td>
+										<div class="input-group">
+											<input type="number" min="2" class="form-control">
+											<div class="input-group-btn">
+												<button type="button" class="btn btn-default" data-toggle="modal" data-target="#variantModal">+</button>
+											</div>
+										</div>
+									</td>
+									
+								</tr>
+							</table>			
+						</div>		
+					</div>
+				</div>		
+			</div>
+			<hr>
+
+			<div class="row no-border">
+				<div class="row-height">
+					<div id="pricelist-shadow-wrapper" class="col-height col-md-6">
+						<div id="pricelist-shadow" class="table-responsive">
+							<table class="table">
+								<tr>
+									<td><strong>Total Price</strong></td>
+								</tr>
+								<tr>
+									<td><strong>Total Quantity</strong></td>
+								</tr>
+							</table>	
+						</div>
+					</div>
+					<div id="datatable-shadow-wrapper" class="col-height col-md-6">
+						<strong>Product Total</strong>
+						<div id="datatable-shadow" class="table-responsive">
+							<table class="table text-center fixed-width">
+								<tr>
+									<td>2</td>
+									<td>3</td>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>$0.90</td>
+									<td>$1.90</td>
+									<td>$2.90</td>
+									<td>$0.90</td>
+									<td>$1.90</td>
+									<td>$2.90</td>
+								</tr>
+							</table>	
+						</div>
+					</div></div>
+			</div>
+			
+
+			  <h4>&nbsp;</h4>
+			  <div class="row">
+		  		<div class="col-md-2 col-sm-2 col-xs-2">
+		  			<button class="btn btn-primary" style="opacity:0.6;">Previous Page</button>		
+		  		</div>
+		  		<div class="col-md-2 col-sm-2 col-xs-2">
+		  			<a href="#" class="btn btn-primary">Place Order&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>		
+		  		</div>
+			  </div>
+
+			  <h2>&nbsp;</h2>
+
+		</div>
+		<h2>&nbsp;</h2>
+		<div class="jumbotron" style="padding:20px 50px 10px 50px; margin-bottom:0px; background-color: #0e5aa8;">
+			<div class="container" style="height:150px;">
+				<!-- <img src="https://cdn.shopify.com/s/files/1/1431/0294/t/3/assets/logo.png?16214878102389155724" style="max-width:115px; width:100%;"> -->
+			</div>	
+		</div>
+		<div class="container-fluid theme-color" style="border-top: 1px solid #1067c0; background-color: #0e5aa8;">
+			<div class="container" style="border-top: 1px solid white; padding:10px 50px;color: rgba(255, 255, 255, 0.6);">
+				<small>
+					&copy; 2016
+					<a href="/" style="color:white;" title="">ShopWaterPlus</a>
+				</small>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// alert('ready');
+			    $("#datatable").each(function() {
+			        var $this = $(this);
+			        var newrows = [];
+			        $this.find("tr").each(function(){
+			            var i = 0;
+			            $(this).find("td").each(function(){
+			                i++;
+			                if(newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
+			                newrows[i].append($(this));
+			            });
+			        });
+			        $this.find("tr").remove();
+			        $.each(newrows, function(){
+			            $this.append(this);
+			        });
+			    });
+
+			    $('select').wrap('<div class="select-wrapper"></div>');
+		 		$('.select-wrapper').append('<div class="next-icon"><i class="fa fa-angle-down"></i></div>');
+
+		 		var parent = document.getElementById('datatable-shadow-wrapper');
+				var child = document.getElementById('datatable-shadow');
+				child.style.bottom = child.clientWidth - child.offsetWidth + "px";
+			    
+			    return false;
+			});
+
+			$( "#datatable-wrapper" ).scroll(function() {
+				// alert(this.pageXOffset);
+				x = $(this).scrollLeft();
+				$('#datatable-shadow').scrollLeft(x)
+			});
+
+			function check_val(elm, min){
+			    cur_val = $(elm).val();
+			    if((cur_val < min || isNaN(cur_val)) && cur_val.length != 0)
+			      $(elm).addClass('error');
+			    else
+			      $(elm).removeClass('error');
+			}
+
+			sno = 0;
+			x = 0;
+			totalQty = 0;
+
+			function removeThisRow(argument) {
+
+				rem_qty = parseInt($(argument).parent().parent().find('.qty').html()); 
+				
+
+				node = argument.parentNode.parentNode;
+				parent = node.parentNode;
+				parent.removeChild(node);
+				sno--;
+				x = 1;
+				while (x <= sno) {
+					child = $('#varTable tr').eq(x);
+					child.children('td').first().text(x);
+					x++;
+				}
+
+				$('#totalQty').val(parseInt($('#totalQty').val()) - rem_qty);
+
+				// totalQty = 0;
+				// $('.qty').each(function(index, element) {
+				// 	e_val = parseInt(element.html());
+				// 	if(e_val >= 0){
+				// 		totalQty = totalQty + e_val;
+				// 	}					
+				// });
+
+				// $('#totalQty').val(totalQty.toString());
+
+				
+			}
+			
+			function addToTable() {
+				qty = parseInt($('#qty').val());
+				if(qty > 0){
+					sno++;
+					$('#totalQty').val(parseInt($('#totalQty').val()) + qty);
+					$('#varTable').append('<tr><td>'+sno+'</td><td>'+$('#var1').val()+'</td><td>'+$('#var2').val()+'</td><td class="qty">'+$('#qty').val()+'</td><td><a class="row-del" title="Remove this row" href="javascript:;" onclick="removeThisRow(this)"><i class="fa fa-times-circle"></i></a></td></tr>');
+				}
+				else{
+					$('#qty').tooltip('show');
+					$('#qty+.tooltip').tooltip().delay(1500).fadeOut('slow');
+				    // setTimeout(function(){ $('#qty').tooltip('hide'); }, 10000);
+				}
+			}
+
+			function verifyThis(argument) {
+				value = $(argument).val();
+				if (!(parseInt(value) >= 0)) {
+					$(argument).val(0);
+				};
+			}
+		</script>
+	</body>
+</html>
