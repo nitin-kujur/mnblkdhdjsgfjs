@@ -187,6 +187,10 @@ select{
 		background-color: #146db5;
 	}
 
+	.theme-text{
+		color: #146db5 !important;
+	}
+
 	/*********************************Popup CSS***************************************/
 	.modal.modal-wide .modal-dialog {
 				  width: 70%;
