@@ -192,6 +192,7 @@
 			  $("#distributors").bootstrapDualListbox({
 			    // bootstrap2Compatible: false,
 			    // selectedFilter: "4975133585"
+			    infoTextEmpty: "No addresses in your list?  Upload the Master Address List <a href='products.php'>HERE.</a>",
 			  });
 
 			  $('.btn-primary').addClass('btn-print');

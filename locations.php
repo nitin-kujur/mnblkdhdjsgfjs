@@ -179,7 +179,8 @@
 				selectedListLabel: 'Selected Locations',
 				preserveSelectionOnMove: 'moved',
 				moveOnSelect: false,
-				selectorMinimalHeight: 200
+				selectorMinimalHeight: 200,
+				infoTextEmpty: "No addresses in your list?  Upload the Master Address List <a href='products.php'>HERE.</a>",
 			  }).promise().done(function() {
 				$( ".bootstrap-duallistbox-container .col-md-6" ).wrapAll( '<div class="row-height"></div>');
 				
@@ -192,20 +193,33 @@
 				$('.btn-primary').addClass('btn-print');
 				$('.btn-print').removeClass('btn btn-primary');
 
-				 $("select[multiple] option").mousedown(function(){
-				   var $self = $(this);
+				//  $("select[multiple] option").mousedown(function(){
+				//    var $self = $(this);
 
-				   if ($self.prop("selected"))
-				          $self.prop("selected", false);
-				   else
-				       $self.prop("selected", true);
+				//    if ($self.prop("selected"))
+				//           $self.prop("selected", false);
+				//    else
+				//        $self.prop("selected", true);
 
-				   return false;
-				});
+				//    return false;
+				// });
 			  });
 
 			  
 		  	});
+
+			$("#distributors").on('change',function(){
+				$this = $(this);
+			    var size=$this.find(":selected").size();
+			    if(size>3){
+			        $this.find(":selected").each(function(ind,sel){            
+			            if(ind>2)
+			                $(this).prop("selected", false)
+			        });
+			        $this.bootstrapDualListbox('refresh', true);
+			        alert('You have a large number of locations or products. Please contact us as at 203.703.6898 or email us at <email> and we will place your order.');
+			    }
+			});
 
 			csv_upload = document.getElementById("csv_upload");
 			csv_upload_txt = document.getElementById("csv_upload_txt");
